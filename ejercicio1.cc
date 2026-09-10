@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
-void QuemarCalorias(int *calorias, int cant);
+void QuemarCalorias(int *calorias);
 int main(){
 
     
