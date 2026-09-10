@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 struct Metabolismo
 {
@@ -11,6 +12,8 @@ void AgregarCalorias(int &calorias, int cant);
 void QuemarCalorias(int *calorias);
 
 int main(){
+
+    SetConsoleOutputCP(CP_UTF8);
     metabolismo.calorias = 350; //inicializar una variable con un valor
     std::cout<<"Se ha inicializado el numero de calorias en: "<<metabolismo.calorias<<std::endl;
 
