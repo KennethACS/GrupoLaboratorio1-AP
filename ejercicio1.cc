@@ -7,6 +7,7 @@ struct Metabolismo
 
 //funciones
 void ConsultarCalorias(int calorias); //paso por copia, no modifica el valor original
+void AgregarCalorias(int &calorias, int cant);
 
 int main(){
     metabolismo.calorias = 350; //inicializar una variable con un valor
@@ -18,4 +19,15 @@ int main(){
 void ConsultarCalorias(int calorias){ //paso por copia, no modifica el valor original
 
     std::cout<<"El numero de calorias actuales es: "<<calorias<<std::endl;
+}
+
+void AgregarCalorias(int &calorias, int cant)
+{
+
+    if (cant < 0)
+    {
+        std::cout << "Error: No se pueden agregar calorias negativas" << std::endl;
+    }
+
+    calorias += cant;
 }
