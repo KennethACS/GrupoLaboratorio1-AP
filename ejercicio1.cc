@@ -8,6 +8,7 @@ struct Metabolismo
 //funciones
 void ConsultarCalorias(int calorias); //paso por copia, no modifica el valor original
 void AgregarCalorias(int &calorias, int cant);
+void QuemarCalorias(int *calorias);
 
 int main(){
     metabolismo.calorias = 350; //inicializar una variable con un valor
@@ -31,3 +32,23 @@ void AgregarCalorias(int &calorias, int cant)
 
     calorias += cant;
 }
+
+void QuemarCalorias (int *calorias)
+{
+    //Valor quemado
+    int calorias_quemadas = 50;
+
+    //Validando que el total de calorias siga siendo mayor a cero
+    //Si es mayor que cero
+    if (*calorias -= calorias_quemadas >= 0)
+    {
+      *calorias -= calorias_quemadas;
+      std::cout<< "Las calorías fueron quemadas con éxito.";
+    }
+    //Si es menor que cero
+    else
+    {
+    std:: cout<<"Cantidad no válida. El total de calorías no puede ser menor que cero";
+    }
+
+} 
