@@ -15,6 +15,12 @@ int main(){
     std::cout<<"Se ha inicializado el numero de calorias en: "<<metabolismo.calorias<<std::endl;
 
     ConsultarCalorias(metabolismo.calorias);
+
+    AgregarCalorias(metabolismo.calorias, 100); //Se agregan 100 calorias
+    ConsultarCalorias(metabolismo.calorias);
+
+    QuemarCalorias(&metabolismo.calorias); //Se queman 50 calorias
+    ConsultarCalorias(metabolismo.calorias);
 }
 
 void ConsultarCalorias(int calorias){ //paso por copia, no modifica el valor original
@@ -36,7 +42,8 @@ void AgregarCalorias(int &calorias, int cant)
 void QuemarCalorias (int *calorias)
 {
     //Valor quemado
-    int calorias_quemadas = 50;
+    const int calorias_quemadas = 50;
+    //std::cout<<calorias_quemadas<<std::endl;
 
     //Validando que el total de calorias siga siendo mayor a cero
     //Si es mayor que cero
